@@ -1,6 +1,8 @@
 #include <iostream>
 #include "src\singlylinkedlist.hpp"
 #include "src\doublylinkedlist.hpp"
+#include "src\circularlinkedlist.hpp"
+#include "src\exception.hpp"
 using namespace std;
 
 int main()
@@ -8,6 +10,7 @@ int main()
 
     SinglyLinkedList singlyList;
     DoublyLinkedList doublyList;
+    CircularLinkedList circularList;
 
     try
     {
@@ -27,6 +30,13 @@ int main()
         doublyList.deleteAtPosition(0);
         doublyList.displayList();
         doublyList.displayReverseList();
+
+        circularList.insertAtEnd(5);
+        circularList.insertAtEnd(6);
+        circularList.insertAtEnd(12);
+        circularList.insertAtEnd(14);
+        circularList.deleteAtPosition(2);
+        circularList.displayList();
     }
     catch (SinglyLinkedList::ListIsEmpty)
     {
@@ -35,6 +45,10 @@ int main()
     catch (SinglyLinkedList::ItemNotFound)
     {
         cout << "Error: Item Not Found!" << endl;
+    }
+    catch(Exception &e){
+
+        cout << e.what() << endl;
     }
 
     singlyList.displayList();
