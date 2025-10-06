@@ -39,5 +39,52 @@ LinkedListDSA/
 ├── LinkedList.exe
 └── README.md
 
-## Folder Structure
+## Getting Started
+
+### Prerequisites
+
+You’ll need a C++ compiler (e.g. `g++`, `clang++`, or MSVC) that supports C++11 or later.
+
+### Building
+
+From the root directory:
+
+```bash
+cd src
+g++ -std=c++11 main.cpp node.cpp singlylinkedlist.cpp doublylinkedlist.cpp circularlinkedlist.cpp exception.cpp -o LinkedList
+```
+
+### Running
+
+```bash
+./LinkedList
+```
+
+This will run the test driver in main.cpp, which should demonstrate various operations (insertion, deletion, traversal, etc.) across different list types.
+
+### Usage Examples
+
+```
+SinglyLinkedList sl;
+sl.insertFront(10);
+sl.insertBack(20);
+sl.insertAt(1, 15);
+sl.remove(10);
+sl.print();  // Expected output: 15 -> 20
+
+DoublyLinkedList dl;
+dl.insertBack(5);
+dl.insertFront(3);
+dl.remove(5);
+dl.printForward();
+dl.printBackward();
+
+CircularLinkedList cl;
+cl.insertBack(100);
+cl.insertBack(200);
+cl.remove(100);
+cl.print();  // with wrap-around behavior
+
+// Exception handling: e.g. remove from empty list, or invalid index
+```
 
