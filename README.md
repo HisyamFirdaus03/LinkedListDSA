@@ -25,7 +25,7 @@ This repository contains C++ implementations of linked list data structures, cre
 - A `main.cpp` file to test and demonstrate the operations  
 
 ## File Structure
-
+```
 LinkedListDSA/
 ├── .vscode/
 ├── src/
@@ -38,7 +38,7 @@ LinkedListDSA/
 │ └── … (header files, if any)
 ├── LinkedList.exe
 └── README.md
-
+```
 ## Getting Started
 
 ### Prerequisites
